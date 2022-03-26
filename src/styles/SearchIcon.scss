@@ -1,0 +1,54 @@
+.search-click {
+    border: none;
+    outline: white;
+    background-color: transparent;
+    color:white;
+    width: 2rem;
+    height: 0.2rem;
+    padding: 1rem;
+    transition: all 0.5s;
+  }
+  .search-click:focus {
+    width: 15rem;
+    position:relative;
+    border: 1px solid #ccc;
+    padding-left: 2rem;
+  }
+  .search-click::placeholder{
+      font-size: 0.9rem;
+  }
+  .search-click {
+    position: relative;
+    overflow: hidden;
+    height: 0.2rem;
+  }
+  .search-click input {
+    background: transparent;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 15rem;
+    height: 0.2rem;
+    padding: 0.1rem;
+  }
+
+  button{
+        position:relative;
+        left:2.5rem;
+        background: none;
+        color: inherit;
+        border: none;
+        width: 3rem;
+        z-index: -1;
+        padding: 0;
+        font: inherit;
+        cursor: none;
+        outline: inherit;
+        
+    }
+    .crossButton{
+        position:relative;
+        cursor:pointer;
+        margin:0;
+        right: 1.5rem;
+    }
+

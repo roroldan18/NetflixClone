@@ -1,0 +1,40 @@
+*{
+    i{
+        color: white;
+        position:relative;
+        margin: 1rem;
+    }
+    span{
+        color: white;
+    }
+    .iconNotification{
+        position: relative;
+        font-size: 0.8rem;
+        left: 2.5rem;
+        bottom: 0.5rem;
+        z-index: 1;
+        border-radius: 100%;
+        background-color: red;
+    }
+
+    .profilePicture{
+        max-width: 2rem;
+        border-radius: 0.2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin: 0.4rem;
+    }
+}
+
+.secondNav{
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+}
+
+.iconProfile:hover{
+    transition: all 0.2s;
+    transform: rotate(180deg);
+    rotate: 120px;
+  } 
+  
