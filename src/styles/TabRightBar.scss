@@ -40,13 +40,17 @@
   
 
 
-  .menuDropHover{
+  .menuDropHoverNotification{
     position:absolute;
     margin: 0;
+    right: 6rem;
+
   }
 
-  .notificationHover{
+  .contentNotification{
       right: 6rem;
+      height: 40rem;
+      overflow:auto;
   }
 
   .card-body{
@@ -64,4 +68,10 @@
         width: 10rem;
         height: 5rem;
       }
+  }
+
+  .arrowNotificacion{
+    position: relative;
+    left: 28.7rem;
+    color: white;
   }
