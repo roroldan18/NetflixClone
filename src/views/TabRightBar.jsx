@@ -1,6 +1,7 @@
 import '../styles/TabRightBar.scss';
 import React from 'react'
 import { SearchIcon } from '../components/SearchIcon';
+import { NotificationComponent } from '../components/NotificationComponent';
 
 export const TabRightBar = () => {
   return (
@@ -9,6 +10,7 @@ export const TabRightBar = () => {
           <span>
             <span className="fa-layers-counter iconNotification">10</span>
             <i className="fa-solid fa-bell fa-lg"></i>
+            <NotificationComponent />
           </span>
           <span>
             <img src="/assets/img/profilePicture/profile.jpg" className='profilePicture' alt="profile" />

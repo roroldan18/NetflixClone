@@ -38,3 +38,30 @@
     rotate: 120px;
   } 
   
+
+
+  .menuDropHover{
+    position:absolute;
+    margin: 0;
+  }
+
+  .notificationHover{
+      right: 6rem;
+  }
+
+  .card-body{
+    margin-top: 1rem;
+    padding:0;
+  }
+
+  .singleNotification{
+      background-color: rgba(black, 0.3);
+      border-top: 0.1rem solid rgb(58, 58, 58); 
+      width: 30rem;
+      img{
+        border-radius: 0.2rem;
+        margin: 1rem 0;
+        width: 10rem;
+        height: 5rem;
+      }
+  }
