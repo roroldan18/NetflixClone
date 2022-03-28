@@ -3,8 +3,12 @@ import { SingleNotification } from './SingleNotification'
 
 export const NotificationComponent = () => {
 
+  
+
+
     const notifications = [
         {
+        id: 1,
         type: 'Estreno',
         description: 'Proyecto Géminis',
         creationDate: new Date(),
@@ -13,6 +17,7 @@ export const NotificationComponent = () => {
         newEpisodes: false,
         },
         {
+        id: 2,
         type: 'Estreno',
         description: 'Cangrejo Negro',
         creationDate: new Date(),
@@ -21,6 +26,7 @@ export const NotificationComponent = () => {
         newEpisodes: true,
         },
         {
+        id: 3,
         type: 'Estreno',
         description: 'Flash',
         creationDate: new Date(),
@@ -29,6 +35,7 @@ export const NotificationComponent = () => {
         newEpisodes: false,
         },
         {
+        id: 4,
         type: 'Estreno',
         description: 'Proyecto Géminis',
         creationDate: new Date(),
@@ -37,6 +44,7 @@ export const NotificationComponent = () => {
         newEpisodes: false,
         },
         {
+        id: 5,
         type: 'Estreno',
         description: 'Cangrejo Negro',
         creationDate: new Date(),
@@ -45,6 +53,7 @@ export const NotificationComponent = () => {
         newEpisodes: true,
         },
         {
+        id: 6,
         type: 'Estreno',
         description: 'Flash',
         creationDate: new Date(),
@@ -53,6 +62,7 @@ export const NotificationComponent = () => {
         newEpisodes: false,
         },
         {
+        id: 7,
         type: 'Estreno',
         description: 'Proyecto Géminis',
         creationDate: new Date(),
@@ -61,6 +71,7 @@ export const NotificationComponent = () => {
         newEpisodes: false,
         },
         {
+        id: 8,
         type: 'Estreno',
         description: 'Cangrejo Negro',
         creationDate: new Date(),
@@ -69,6 +80,7 @@ export const NotificationComponent = () => {
         newEpisodes: true,
         },
         {
+        id: 9,
         type: 'Estreno',
         description: 'Flash',
         creationDate: new Date(),
@@ -84,7 +96,7 @@ export const NotificationComponent = () => {
       <i className="fa-solid fa-caret-up m-0 arrowNotificacion"/>
       <div className='contentNotification '>
             {
-                notifications.map(notification => <SingleNotification notification={notification} /> )
+                notifications.map(notification => <SingleNotification key={notification.id} notification={notification} /> )
             }
         </div>
       </div>
