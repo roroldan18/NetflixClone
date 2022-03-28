@@ -2,22 +2,37 @@ import '../styles/TabRightBar.scss';
 import React, { useState } from 'react'
 import { SearchIcon } from '../components/SearchIcon';
 import { NotificationComponent } from '../components/NotificationComponent';
+import { ProfilesComponent } from '../components/ProfilesComponent';
 
 export const TabRightBar = () => {
 
   let timer = 0;
   const TIMEOUT = 500;
 
-  const [isHovering, setIsHovering] = useState(false);
+  const [isHoveringNotifications, setIsHoveringNotifications] = useState(false);
+  const [isHoveringProfiles, setIsHoveringProfiles] = useState(false);
 
-  const handleMouseHover = () => {
-    setIsHovering(true);
+  const handleMouseHoverNotification = () => {
+    setIsHoveringProfiles(false);
+    setIsHoveringNotifications(true);
     clearTimeout(timer);
   }
 
-  const handleMouseOut = () => {
+  const handleMouseOutNotification = () => {
     timer = setTimeout(() => {
-      setIsHovering(false);
+      setIsHoveringNotifications(false);
+    }, TIMEOUT);
+  }
+
+  const handleMouseHoverProfiles = () => {
+    setIsHoveringNotifications(false);
+    setIsHoveringProfiles(true);
+    clearTimeout(timer);
+  }
+
+  const handleMouseOutProfiles = () =>{
+    timer = setTimeout(() => {
+      setIsHoveringProfiles(false);
     }, TIMEOUT);
   }
 
@@ -26,14 +41,15 @@ export const TabRightBar = () => {
   return (
       <div className="form-inline my-2 my-lg-0 secondNav">
           <SearchIcon />
-          <span onMouseOver={handleMouseHover} onMouseOut={handleMouseOut}>
+          <span onMouseOver={handleMouseHoverNotification} onMouseOut={handleMouseOutNotification}>
             <span className="fa-layers-counter iconNotification">10</span>
             <i className="fa-solid fa-bell fa-lg"></i>
-            { isHovering && <NotificationComponent setIsHovering={setIsHovering}/>}
+            { isHoveringNotifications && <NotificationComponent/>}
           </span>
-          <span>
+          <span onMouseOver={handleMouseHoverProfiles} onMouseOut={handleMouseOutProfiles} className='profilesMenu'>
             <img src="/assets/img/profilePicture/profile.jpg" className='profilePicture' alt="profile" />
             <i className="fa-solid fa-caret-down iconProfile"></i>
+            { isHoveringProfiles && <ProfilesComponent />}
           </span>
       </div>
   )

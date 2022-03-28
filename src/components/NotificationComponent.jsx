@@ -3,9 +3,6 @@ import { SingleNotification } from './SingleNotification'
 
 export const NotificationComponent = () => {
 
-  
-
-
     const notifications = [
         {
         id: 1,
