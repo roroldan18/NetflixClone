@@ -41,7 +41,7 @@ export const TabRightBar = () => {
   return (
       <div className="form-inline my-2 my-lg-0 secondNav">
           <SearchIcon />
-          <span onMouseOver={handleMouseHoverNotification} onMouseOut={handleMouseOutNotification}>
+          <span onMouseOver={handleMouseHoverNotification} onMouseOut={handleMouseOutNotification} className='notificationsMenu'>
             <span className="fa-layers-counter iconNotification">10</span>
             <i className="fa-solid fa-bell fa-lg"></i>
             { isHoveringNotifications && <NotificationComponent/>}

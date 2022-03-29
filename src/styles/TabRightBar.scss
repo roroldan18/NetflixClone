@@ -32,6 +32,14 @@
     right: 1.5rem;
 }
 
+.profilesMenu{
+  cursor: pointer;
+}
+
+.notificationsMenu{
+  cursor: pointer;
+}
+
 .profilesMenu:hover .iconProfile{
     transition: 0.2s;
     transform: rotate(180deg);
