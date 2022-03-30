@@ -69,7 +69,7 @@
   }
 
   .singleNotification{
-      background-color: rgba(black, 0.3);
+      background-color: rgba(black, 0.8);
       cursor: pointer;
       border-top: 0.1rem solid rgb(58, 58, 58); 
       color:rgb(199, 199, 199);
@@ -81,7 +81,7 @@
         height: 5rem;
       }
       &:hover{
-        background-color: rgba(black, 0.5);
+        background-color: rgba(black, 0.9);
         color:white;
       }
   }
@@ -99,13 +99,12 @@
   }
 
   .singleUser{
-    background-color: rgba(black, 0.3);
+    background-color: rgba(black, 0.9);
     cursor: pointer;
-    color:rgb(199, 199, 199);
+    color:rgb(223, 222, 222);
     width: 13rem;
     &:hover{
-      background-color: rgba(black, 0.5);
-      color:white;
+      text-decoration: underline;
     }
   }
 

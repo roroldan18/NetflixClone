@@ -4,7 +4,7 @@ import { TabRightBar } from "./TabRightBar";
 
 export const Header = () => {
   return (
-      <nav className="navbar navbar-expand-lg sticky-top navbar-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark navBarStick">
         <TabNavigationBar />
         <TabRightBar />
       </nav>

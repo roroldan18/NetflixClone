@@ -12,9 +12,11 @@
   .search-click:focus {
     width: 15rem;
     position:relative;
+    background-color: rgb(37, 37, 37, 0.6);
     border: 1px solid #ccc;
     padding-left: 2rem;
   }
+  
   .search-click::placeholder{
       font-size: 0.9rem;
   }
@@ -25,6 +27,7 @@
   }
   .search-click input {
     background: transparent;
+    color:white;
     border: 1px solid #ccc;
     outline: none;
     width: 15rem;
@@ -32,7 +35,7 @@
     padding: 0.1rem;
   }
 
-  button{
+  .searchContainer button{
         position:relative;
         left:2.5rem;
         background: none;

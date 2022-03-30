@@ -1,0 +1,44 @@
+
+.bg_movie{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-image: url(https://occ-0-5428-185.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABeMkA3Kp42bczsQ9y0aJuvLRdtFEPQRw5FJkXDNmQsUMBSloGaKxczcnnnXJ0Ke9QB1dB1dNn9mbhTDdHfD08xpuimBF.webp?r=310), linear-gradient(to left, rgb(black, 1), rgb(black, 0.2)); */
+    background-image:
+    linear-gradient(to left, rgb(black, 0), rgb(black, 0.73)),
+    url('https://occ-0-5428-185.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABeMkA3Kp42bczsQ9y0aJuvLRdtFEPQRw5FJkXDNmQsUMBSloGaKxczcnnnXJ0Ke9QB1dB1dNn9mbhTDdHfD08xpuimBF.webp?r=310');
+    background-size: cover;
+
+}
+
+.movie_trailer_details{
+    margin: 2rem;
+    max-width: 35rem;
+}
+
+.titleMovieTrailer{
+    position: relative;
+    top: 2rem;
+    width: 40rem;
+    margin-bottom: 2rem;
+}
+
+.subtitleMenuTrailer{
+    margin-top:1rem;
+    svg{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    h5{
+        text-shadow: 2px 2px rgb(black, 0.6);
+        font-size: 1.8rem;
+    }
+}
+
+.descriptionMovieTrailer{
+    color:white;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    word-spacing: 0.5rem;
+    text-shadow: 2px 2px rgb(black, 0.6);
+}
