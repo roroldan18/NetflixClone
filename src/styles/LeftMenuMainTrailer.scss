@@ -1,0 +1,37 @@
+.leftMenuMainTrailer{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 20%;
+    position: relative;
+    left: 80%;
+    top: -6rem; 
+    .iconVolume{
+        color:white !important;
+        cursor: pointer;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 1rem;
+        padding: 0.5rem;
+        border: 0.1rem solid white;
+        border-radius: 2rem;
+        &:hover{
+            background-color: rgb(white, 0.2);
+        }
+        &:active{
+            background-color: rgb(white, 0.7);
+        }
+    }
+    .ageDisplayMovieTrailer{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        padding-left: 1rem;
+        font-size: 1.2rem;
+        align-items: center;
+        background-color: rgb(black, 0.3);
+        width: 8rem;
+        border-left: 0.3rem solid white;
+    }
+
+}

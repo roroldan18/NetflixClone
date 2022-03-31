@@ -3,17 +3,26 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    /* background-image: url(https://occ-0-5428-185.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABeMkA3Kp42bczsQ9y0aJuvLRdtFEPQRw5FJkXDNmQsUMBSloGaKxczcnnnXJ0Ke9QB1dB1dNn9mbhTDdHfD08xpuimBF.webp?r=310), linear-gradient(to left, rgb(black, 1), rgb(black, 0.2)); */
     background-image:
     linear-gradient(to left, rgb(black, 0), rgb(black, 0.73)),
     url('https://occ-0-5428-185.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABeMkA3Kp42bczsQ9y0aJuvLRdtFEPQRw5FJkXDNmQsUMBSloGaKxczcnnnXJ0Ke9QB1dB1dNn9mbhTDdHfD08xpuimBF.webp?r=310');
     background-size: cover;
-
+}
+.trailerVideo{
+    object-fit: cover;
+    margin: auto;
+    position: absolute;
+    box-shadow: 0 2rem 2rem rgba(black,1);
+    overflow: hidden;
+    width: 100%;
+    height: 60rem;
 }
 
 .movie_trailer_details{
+    position: relative;
     margin: 2rem;
     max-width: 35rem;
+    z-index: 1;
 }
 
 .titleMovieTrailer{
@@ -25,6 +34,7 @@
 
 .subtitleMenuTrailer{
     margin-top:1rem;
+    z-index: -2;
     svg{
         width: 2.5rem;
         height: 2.5rem;
