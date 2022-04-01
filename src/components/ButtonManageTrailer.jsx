@@ -1,20 +1,36 @@
 import React, { useState } from 'react';
 
-export const ButtonManageTrailer = ({isPlaying}) => {
+export const ButtonManageTrailer = ({videoIsPaused, setVideoIsPaused}) => {
+    const trailerVideo = document.getElementById('trailerVideo');
+
     const initialVolumeIcon = 'assets/svg/minimal-speaker-icon.svg';
     const [volumeIcon, setVolumeIcon] = useState(initialVolumeIcon);
 
-    const handleClick = () => {
+
+    const handleClickVolume = () => {
         if(volumeIcon === 'assets/svg/minimal-speaker-icon.svg'){
             setVolumeIcon('assets/svg/speaker-off.svg');
+            trailerVideo.muted = true;
         } else {
             setVolumeIcon(initialVolumeIcon);
+            trailerVideo.muted = false;
         }
     }
 
-    const svgImg = isPlaying ? `${volumeIcon}` : 'assets/svg/reload-icon.svg';
+    const handleRestartVideo = () => {
+        trailerVideo.play();
+        setVideoIsPaused(false);
+    }
 
   return (
-    <img src={svgImg} alt="control" className='iconVolume' onClick={handleClick}/>
+      <>
+        {
+            videoIsPaused
+            ?
+                <img src='assets/svg/reload-icon.svg' alt="control" className='iconVolume' onClick={handleRestartVideo}/>
+            :
+                <img src={volumeIcon} alt="control" className='iconVolume' onClick={handleClickVolume}/>
+        } 
+      </>
   )
 }
