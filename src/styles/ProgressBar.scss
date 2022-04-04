@@ -1,0 +1,10 @@
+.progressBar{
+        position: relative;
+        height: 2px;  
+        width: 100%;
+        margin-bottom: 1rem;
+}
+
+progress::-webkit-progress-value {
+    background-color: white;
+}          

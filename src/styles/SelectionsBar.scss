@@ -1,0 +1,52 @@
+.selectionsBar{
+    background-color: rgb(black, 0.6);
+    display: flex;
+    position:relative;
+    width: 100%;
+    height: 20rem;
+    text-align: center;
+    text-decoration: none;
+    overflow: auto;
+}
+.imgSelection{
+    position: relative;
+    margin: 2rem 0;
+    width: 8rem;
+    height: 15rem;
+}
+
+.selectionActive{
+    border: 2px solid rgb(255, 255, 255);
+    
+}
+
+.targetPictureSelection{
+    img{
+        padding: 0.4rem;
+        border-radius: 1rem;
+        width: 3rem;
+        height: 3rem;
+        margin: 0.3rem;
+        margin-top: 4rem;
+        cursor: pointer;
+        opacity: 0;
+        transition: ease-in-out 0.2s;
+        &:focus{
+            outline: 4px solid #fff;
+        }
+    }
+    &:hover{
+        img{
+            opacity: 100%;
+            filter: invert(100%);
+            transition: 0.4s;
+        }
+    }
+}
+
+.blockImgSelection{
+    background-color: rgb(white, 0.04);
+}
+
+
+
