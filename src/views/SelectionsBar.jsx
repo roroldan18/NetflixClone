@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import { PictureSelection } from '../components/PictureSelection';
-import { ProgressBar } from '../components/ProgressBar';
+import { PictureSelection } from '../components/SelectionsBar/PictureSelection';
+import { ProgressBar } from '../components/SelectionsBar/ProgressBar';
 import '../styles/SelectionsBar.scss';
 
 export const SelectionsBar = ({options, buttonsOptions}) => {
+
+  const [count, setCount] = useState(0);
 
   const [numberOptionActive, setNumberOptionActive] = useState(1);
 
@@ -11,16 +13,26 @@ export const SelectionsBar = ({options, buttonsOptions}) => {
     return numberOptionActive===optionOrder ? 'selectionActive' : '';
   }
 
+  const handleClickSelection = (optionOrder) => {
+    setNumberOptionActive(optionOrder);
+    setCount(0);
+  }
+
   return (
-      <div className='selectionsBar text-center ms-2'>
-        {
-          options.map(option => 
-            <div className={`d-flex row m-1 ${classStyleSelection(option.order)}`} key={option.order}>
-              <ProgressBar option={option} setNumberOptionActive={setNumberOptionActive} numberOptionActive={numberOptionActive} />
-              <PictureSelection option={option} buttonsOptions={buttonsOptions} />
-            </div>
-            )
-        }
+    <>
+      <div className="subMenu">
+        <h2 className='text-white titleSection'>Selecciones para ti</h2>
+        <div className='selectionsBar text-center ms-2'>
+          {
+            options.map(option => 
+              <div role='button' className={`d-flex row m-1 selectionCard ${classStyleSelection(option.order)}`} key={option.order} onClick={ () => handleClickSelection(option.order)}>
+                <ProgressBar option={option} setNumberOptionActive={setNumberOptionActive} numberOptionActive={numberOptionActive} setCount={setCount} count={count} />
+                <PictureSelection option={option} buttonsOptions={buttonsOptions} numberOptionActive={numberOptionActive}/>
+              </div>
+              )
+          }
+        </div>
       </div>
+    </>
   )
 }

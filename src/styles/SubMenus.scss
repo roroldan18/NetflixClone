@@ -1,0 +1,76 @@
+$height-card: 10rem;
+$duration: 400ms;
+html {
+    scroll-behavior: smooth;
+  }
+  
+.lineSubmenu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: repeat(3,100%);
+    overflow:hidden;
+    scroll-behavior: smooth;
+
+    width: 100%;
+    height: $height-card;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none; 
+    }
+    section{
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        margin: 0.3rem;
+        .imgMovieCard{
+            padding: 1rem 0.3rem;
+            border-radius: 0.2rem;
+            width: 15rem !important;
+            height: $height-card;
+            transition: $duration all;
+            &:hover{
+                margin: 0 40px;
+                transform: scale(1.3);
+                transition: $duration all;
+            }
+        }
+    }
+}
+
+.subTitle{
+    color: rgb(white,0.7);
+    font-size: 1.4rem;
+}
+
+@mixin styleArrow {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background:rgb(0,0,0);
+    width: 7.5rem;
+    padding: 1.2rem;
+    text-align: center;
+    z-index: 1;
+    &:hover{
+        color:white;
+    }
+}
+
+.arrowPrev{
+    @include styleArrow;
+    top:0; bottom:0; left:0;
+    background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+.arrowNext{
+    @include styleArrow;
+    top:0; bottom:0; right:0;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}

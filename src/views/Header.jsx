@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { TabNavigationBar } from "../components/TabNavigationBar";
+import { TabNavigationBar } from "../components/Nav/TabNavigationBar";
 import { TabRightBar } from "./TabRightBar";
 
 export const Header = () => {

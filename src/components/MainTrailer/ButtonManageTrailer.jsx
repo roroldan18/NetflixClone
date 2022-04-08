@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 
 export const ButtonManageTrailer = ({videoIsPaused, setVideoIsPaused}) => {
-    const trailerVideo = document.getElementById('trailerVideo');
+
+    const [trailerVideo, setTrailerVideo] = useState(null);
+
+    window.onload = function() {
+        setTrailerVideo(document.getElementById('trailerVideo'));
+    };
+    
 
     const initialVolumeIcon = 'assets/svg/minimal-speaker-icon.svg';
     const [volumeIcon, setVolumeIcon] = useState(initialVolumeIcon);

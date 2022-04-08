@@ -1,6 +1,6 @@
 
 .bg_movie{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     background-image:
@@ -24,9 +24,10 @@
     }
     &-false{
         object-fit: cover;
-        margin: auto;
+        margin-top: -2rem;
         position: absolute;
-        box-shadow: 0 2rem 2rem rgba(black,1);
+        border: 0.2rem solid rgb(20,20,20,0.1);
+        box-shadow: 2rem 2rem rgb(20,20,20,1);
         overflow: hidden;
         width: 100%;
         height: 60rem;

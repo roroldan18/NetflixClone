@@ -1,8 +1,9 @@
 import '../styles/TabRightBar.scss';
 import React, { useState } from 'react'
-import { SearchIcon } from '../components/SearchIcon';
-import { NotificationComponent } from '../components/NotificationComponent';
-import { ProfilesComponent } from '../components/ProfilesComponent';
+import { SearchIcon } from '../components/Nav/SearchIcon';
+import { NotificationComponent } from '../components/Nav/NotificationComponent';
+import { ProfilesComponent } from '../components/Nav/ProfilesComponent';
+
 
 export const TabRightBar = () => {
 

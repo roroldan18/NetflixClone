@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/ButtonMovieTrailer.scss'
+import '../../styles/ButtonMovieTrailer.scss'
 
 export const ButtonMovieTrailer = ({svg, text, classN}) => {
 

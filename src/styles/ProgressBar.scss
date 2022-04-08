@@ -1,10 +1,15 @@
-.progressBar{
+progress{
         position: relative;
         height: 2px;  
         width: 100%;
-        margin-bottom: 1rem;
+        background: gray;
+        
 }
 
-progress::-webkit-progress-value {
-    background-color: white;
-}          
+progress::-webkit-progress-value{
+        background: rgb(63, 63, 63);
+}
+
+progress::-moz-progress-bar{
+        background: rgb(63, 63, 63);
+}

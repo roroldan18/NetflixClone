@@ -1,52 +1,94 @@
 .selectionsBar{
-    background-color: rgb(black, 0.6);
+    background-color: rgb(black, 0.5);
     display: flex;
     position:relative;
     width: 100%;
     height: 20rem;
     text-align: center;
     text-decoration: none;
-    overflow: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none; 
+    }
+    .selectionCard{
+        scroll-snap-align: start;
+    }
 }
 .imgSelection{
     position: relative;
-    margin: 2rem 0;
     width: 8rem;
     height: 15rem;
 }
 
 .selectionActive{
-    border: 2px solid rgb(255, 255, 255);
-    
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    background-color: rgb(gray, 0.2);
+    .targetPictureSelection .buttonOption{
+        filter: invert(100%);
+        opacity: 1;
+        transition: 0.4s;
+        &:hover{
+            opacity: 0.5;
+            transition: 0.2s;
+        }
+    }
 }
 
 .targetPictureSelection{
-    img{
+    .buttonOption{
         padding: 0.4rem;
         border-radius: 1rem;
         width: 3rem;
         height: 3rem;
         margin: 0.3rem;
         margin-top: 4rem;
-        cursor: pointer;
         opacity: 0;
         transition: ease-in-out 0.2s;
         &:focus{
             outline: 4px solid #fff;
         }
     }
-    &:hover{
-        img{
-            opacity: 100%;
-            filter: invert(100%);
-            transition: 0.4s;
-        }
-    }
+}
+.titleSection{
+    position: relative;
+    
 }
 
 .blockImgSelection{
-    background-color: rgb(white, 0.04);
+    align-items: center;
 }
 
+.selectionCard{
+    cursor: pointer;
+    position: relative;
+    transition: 0.4s;
+}
 
-
+.spanOptions{
+    position: relative;
+    .moreInfoMovie{
+        background-color: black;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        bottom: 1.5rem;
+        left: 3rem;
+        z-index: 2;
+        width: 20rem;
+        height: 12rem;
+        img{
+            width: 100%;
+            border-radius: 0;
+            height: 8rem;
+        }
+        .titleCard{
+            color:white;
+            
+        }
+    }
+}
