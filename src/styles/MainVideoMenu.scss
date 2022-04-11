@@ -1,37 +1,47 @@
+$backgroundColor: rgb(20,20,20);
+$borderColor: -webkit-linear-gradient(to bottom, rgba($backgroundColor, 0) 0%, rgba($backgroundColor,1) 73%);
+
+@mixin video-Style{
+    object-fit: cover;
+    position: absolute;
+    box-shadow: 10rem 10rem 1rem rgba($backgroundColor,1);
+    overflow: hidden;
+    width: 100%;
+    height: 60rem;
+    transition: 0.3s;   
+}
+
+.gradientBackground{
+    position:absolute;
+    z-index: 1;
+    margin-top: -2rem;
+    width: 100%;
+    height: 60rem;
+    background: linear-gradient(to Bottom, rgba(20,20,20,0) 75%, rgba(20,20,20,1) 80%); 
+}
 
 .bg_movie{
     position: relative;
     width: 100%;
     height: 100%;
     background-image:
-        linear-gradient(to left, rgb(black, 0), rgb(20,20,20, 1)),
-        linear-gradient(to top, rgb(black, 0) 80%, rgb(20,20,20, 1)),
-        linear-gradient(to bottom, rgb(black, 0), rgb(20,20,20, 1)),
+        linear-gradient(to left, rgb(black, 0), rgb($backgroundColor, 1)),
+        linear-gradient(to top, rgb(black, 0) 80%, rgb($backgroundColor, 1)),
+        linear-gradient(to bottom, rgb(black, 0), rgb($backgroundColor, 1)),
         url('https://occ-0-5428-185.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABeMkA3Kp42bczsQ9y0aJuvLRdtFEPQRw5FJkXDNmQsUMBSloGaKxczcnnnXJ0Ke9QB1dB1dNn9mbhTDdHfD08xpuimBF.webp?r=310');
     background-size: cover;
 }
+
+
 .trailerVideo{
     &-true{
-        object-fit: cover;
+        @include video-Style();
         margin: auto;
-        position: absolute;
-        box-shadow: 0 2rem 2rem rgba(black,1);
-        overflow: hidden;
-        width: 100%;
-        height: 60rem;
         opacity: 0;
-        transition: 0.3s;
     }
     &-false{
-        object-fit: cover;
+        @include video-Style();
         margin-top: -2rem;
-        position: absolute;
-        border: 0.2rem solid rgb(20,20,20,0.1);
-        box-shadow: 2rem 2rem rgb(20,20,20,1);
-        overflow: hidden;
-        width: 100%;
-        height: 60rem;
-        transition: 0.3s;
     }
 }
 
@@ -39,7 +49,7 @@
     position: relative;
     margin: 2rem;
     max-width: 35rem;
-    z-index: 1;
+    z-index: 2;
 }
 
 .titleMovieTrailer{
@@ -69,3 +79,10 @@
     word-spacing: 0.5rem;
     text-shadow: 2px 2px rgb(black, 0.6);
 }
+
+#trailerVideo{
+    transition: opacity .5s linear;
+
+    
+}
+    
