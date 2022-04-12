@@ -1,37 +1,31 @@
 import React, { useState } from 'react';
 import { PropButtonManageTrailer } from '../../utils/types';
 
-export const ButtonManageTrailer = ({videoIsPaused, setVideoIsPaused}:PropButtonManageTrailer) => {
-
-    const [trailerVideo, setTrailerVideo] = useState<HTMLVideoElement|null> (null);
-
-    window.onload = function() {
-        setTrailerVideo(document.getElementById('trailerVideo') as HTMLVideoElement);
-    };
-    
+export const ButtonManageTrailer = ({videoIsPaused, setVideoIsPaused, videoTrailer }:PropButtonManageTrailer): JSX.Element => {
 
     const initialVolumeIcon = 'assets/svg/minimal-speaker-icon.svg';
     const [volumeIcon, setVolumeIcon] = useState(initialVolumeIcon);
 
 
     const handleClickVolume = () => {
+        console.log('click');
         if(volumeIcon === 'assets/svg/minimal-speaker-icon.svg'){
             setVolumeIcon('assets/svg/speaker-off.svg');
-            if(trailerVideo !== null){
-                trailerVideo.muted = true;
+            if(videoTrailer !== null){
+                videoTrailer.muted = true;
             }
                 
         } else {
             setVolumeIcon(initialVolumeIcon);
-            if(trailerVideo !== null){
-                trailerVideo.muted = false;
+            if(videoTrailer !== null){
+                videoTrailer.muted = false;
             }
         }
     }
 
     const handleRestartVideo = () => {
-        if(trailerVideo !== null){
-            trailerVideo.play();
+        if(videoTrailer !== null){
+            videoTrailer.play();
         }
         setVideoIsPaused(false);
     }

@@ -9,6 +9,7 @@ import { User } from "./usersProfile";
 export type PropButtonManageTrailer = {
     videoIsPaused: boolean;
     setVideoIsPaused: React.Dispatch<React.SetStateAction<boolean>>;
+    videoTrailer: HTMLVideoElement|null;
 }
 
 export type PropUserList = {
@@ -23,6 +24,7 @@ export type PropVideoTrailer = {
     videoPath: MovieTrailer['pathVideo'],
     videoIsPaused: boolean,
     setVideoIsPaused: React.Dispatch<React.SetStateAction<boolean>>,
+    setVideoTrailer: React.Dispatch<React.SetStateAction<HTMLVideoElement|null>>,
 }
 
 export type PropOptionProfile = {

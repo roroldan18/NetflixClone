@@ -12,16 +12,17 @@ import { ButtonManageTrailer } from '../components/MainTrailer/ButtonManageTrail
 import { TagAge } from '../components/MainTrailer/TagAge';
 import { movieTrailer } from '../utils/movieTrailer';
 import { buttonsOptions } from '../utils/buttonsOptions';
-import { SelectionsBar } from './SelectionsBar';
-import { optionsTrailer } from '../utils/optionsTrailer';
+/* import { SelectionsBar } from './SelectionsBar';
+import { optionsTrailer } from '../utils/optionsTrailer'; */
 
 export const MainVideoMenu = () => {
 
     const [videoIsPaused, setVideoIsPaused] = useState(false);
+    const [videoTrailer, setVideoTrailer] = useState<HTMLVideoElement|null>(null);
 
   return (
     <div className='bg_movie'>
-        <VideoTrailer videoPath={movieTrailer.pathVideo} videoIsPaused={videoIsPaused} setVideoIsPaused={setVideoIsPaused}  />
+        <VideoTrailer videoPath={movieTrailer.pathVideo} videoIsPaused={videoIsPaused} setVideoIsPaused={setVideoIsPaused} setVideoTrailer={setVideoTrailer} />
         <div className='movie_trailer_details'>
             <TitleMovieTrailer src={movieTrailer.src} alt={movieTrailer.alt} />
             {movieTrailer.isTop10 && <SubtitleMovieTrailer position={movieTrailer.position} />}
@@ -33,10 +34,10 @@ export const MainVideoMenu = () => {
             </div>
         </div>
         <span className="leftMenuMainTrailer">
-            <ButtonManageTrailer videoIsPaused={videoIsPaused} setVideoIsPaused={setVideoIsPaused} />
+            <ButtonManageTrailer videoIsPaused={videoIsPaused} setVideoIsPaused={setVideoIsPaused} videoTrailer={videoTrailer} />
             <TagAge age={movieTrailer.age} />
         </span>
-        <SelectionsBar options={optionsTrailer} buttonsOptions={buttonsOptions}  />
+        {/* <SelectionsBar options={optionsTrailer} buttonsOptions={buttonsOptions}  /> */}
     </div>
   )
 }

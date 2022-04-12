@@ -48,7 +48,7 @@ export const TabRightBar = ():JSX.Element => {
             { isHoveringNotifications && <NotificationComponent/>}
           </span>
           <span onMouseOver={handleMouseHoverProfiles} onMouseOut={handleMouseOutProfiles} className='profilesMenu'>
-            <img src="/assets/img/profilePicture/profile.jpg" className='profilePicture' alt="profile" />
+            <img src="assets/img/profilePicture/profile.jpg" className='profilePicture' alt="profile" />
             <i className="fa-solid fa-caret-down iconProfile"></i>
             { isHoveringProfiles && <ProfilesComponent />}
           </span>
