@@ -8,7 +8,6 @@ export const ButtonManageTrailer = ({videoIsPaused, setVideoIsPaused, videoTrail
 
 
     const handleClickVolume = () => {
-        console.log('click');
         if(volumeIcon === 'assets/svg/minimal-speaker-icon.svg'){
             setVolumeIcon('assets/svg/speaker-off.svg');
             if(videoTrailer !== null){

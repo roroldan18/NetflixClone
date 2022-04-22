@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/NetflixCarousel.scss';
+import './NetflixCarousel.scss';
 import { optionsTrailer } from '../../utils/optionsTrailer';
 
 

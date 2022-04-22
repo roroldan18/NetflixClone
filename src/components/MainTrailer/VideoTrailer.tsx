@@ -16,10 +16,11 @@ export const VideoTrailer = ({videoPath, videoIsPaused, setVideoIsPaused, setVid
     }
   }, [videoRef])
 
+  //+++++++++++++++++++++++++++++++IMPORTANTE --> Poner de nuevo el autplay  +++++++++++++++++++++++++++++++
   return (
       <>
         <div className='gradientBackground'></div>
-        <video autoPlay disablePictureInPicture className={`trailerVideo-${videoIsPaused}`} id='trailerVideo' onPause={handleEventPause} muted={false} ref={videoRef} >
+        <video disablePictureInPicture className={`trailerVideo-${videoIsPaused}`} id='trailerVideo' onPause={handleEventPause} muted={false} ref={videoRef} >
             <source src={videoPath} type="video/mp4" />
         </video> 
       </>

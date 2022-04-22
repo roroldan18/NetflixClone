@@ -32,7 +32,16 @@ export type PropOptionProfile = {
 }
 
 export type PropCardMoreInfo ={
-    option: OptionsTrailer
+    option: OptionsTrailer,
+}
+
+export type PropCardMoreInfoSelection ={
+    option: OptionsTrailer,
+}
+
+export type PropCardHover ={
+    isHovering: boolean,
+    keyCard: number
 }
 
 

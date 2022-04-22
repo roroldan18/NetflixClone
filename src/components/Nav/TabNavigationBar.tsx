@@ -1,5 +1,6 @@
 import React from 'react'
-import { menu } from '../../utils/menu'
+import { menu } from '../../utils/menu';
+import './TabNavigationBar.scss';
 
 export const TabNavigationBar = () => {
  

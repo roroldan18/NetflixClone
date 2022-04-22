@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../../styles/ButtonMovieTrailer.scss';
+import './ButtonMovieTrailer.scss';
 import { ButtonOption } from '../../utils/buttonsOptions';
 
 export const ButtonMovieTrailer = ({svg, text, classN}:Pick<ButtonOption, 'svg'|'text'|'classN'>) => {

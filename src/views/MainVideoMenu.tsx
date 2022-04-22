@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import '../styles/MainVideoMenu.scss';
-import '../styles/LeftMenuMainTrailer.scss';
+import './MainVideoMenu.scss';
+import './LeftMenuMainTrailer.scss';
 
 import { VideoTrailer } from '../components/MainTrailer/VideoTrailer';
 import { TitleMovieTrailer } from '../components/MainTrailer/TitleMovieTrailer';
@@ -24,7 +24,9 @@ export const MainVideoMenu = () => {
     <div className='bg_movie'>
         <VideoTrailer videoPath={movieTrailer.pathVideo} videoIsPaused={videoIsPaused} setVideoIsPaused={setVideoIsPaused} setVideoTrailer={setVideoTrailer} />
         <div className='movie_trailer_details'>
-            <TitleMovieTrailer src={movieTrailer.src} alt={movieTrailer.alt} />
+            <div className='container_title'>
+                <TitleMovieTrailer src={movieTrailer.src} alt={movieTrailer.alt} />
+            </div>
             {movieTrailer.isTop10 && <SubtitleMovieTrailer position={movieTrailer.position} />}
             <DescribeMovieTrailer description={movieTrailer.description}/>
             <div className='d-flex buttonMovieTrailer'>

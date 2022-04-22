@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { PictureSelection } from '../components/SelectionsBar/PictureSelection';
 import { ProgressBar } from '../components/SelectionsBar/ProgressBar';
-import '../styles/SelectionsBar.scss';
+import './SelectionsBar.scss';
 import { OptionsTrailer } from '../utils/optionsTrailer';
 import { PropSelectionBar } from '../utils/types';
 

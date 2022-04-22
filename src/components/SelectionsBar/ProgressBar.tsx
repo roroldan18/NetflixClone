@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../../styles/ProgressBar.scss';
+import './ProgressBar.scss';
 import { PropProgressBar } from '../../utils/types';
 
 export const ProgressBar = ({option, setNumberOptionActive, numberOptionActive, setCount, count}:PropProgressBar) => {

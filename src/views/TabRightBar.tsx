@@ -1,4 +1,4 @@
-import '../styles/TabRightBar.scss';
+import './TabRightBar.scss';
 import React, { useState } from 'react'
 import { SearchIcon } from '../components/Nav/SearchIcon';
 import { NotificationComponent } from '../components/Nav/NotificationComponent';

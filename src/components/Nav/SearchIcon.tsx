@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../../styles/SearchIcon.scss';
+import './SearchIcon.scss';
 
 
 export const SearchIcon = () => {

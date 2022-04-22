@@ -23,5 +23,9 @@ export  const menu:OptionMenu[] = [
     {
       title: 'Mi lista',
       href: '#',
+    },
+    {
+      title: 'Audio y subtitulos',
+      href: '#',
     }
   ]

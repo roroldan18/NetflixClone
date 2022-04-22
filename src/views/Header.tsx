@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { TabNavigationBar } from "../components/Nav/TabNavigationBar";
 import { TabRightBar } from "./TabRightBar";
+import './Header.scss';
 
 export const Header = ():JSX.Element => {
 

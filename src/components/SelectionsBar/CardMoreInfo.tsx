@@ -1,7 +1,7 @@
 import React from 'react';
-import { PropCardMoreInfo } from '../../utils/types';
+import {  PropCardMoreInfoSelection } from '../../utils/types';
 
-export const CardMoreInfo = ({option}:PropCardMoreInfo) => {
+export const CardMoreInfo = ({option}:PropCardMoreInfoSelection) => {
 
   return (
       <div className=''>

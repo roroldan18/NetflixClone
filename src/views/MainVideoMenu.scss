@@ -48,27 +48,67 @@ $borderColor: -webkit-linear-gradient(to bottom, rgba($backgroundColor, 0) 0%, r
 .movie_trailer_details{
     position: relative;
     margin: 2rem;
-    max-width: 35rem;
     z-index: 2;
+    max-width: 35rem;
+    
+}
+
+.container_title{
+    height: 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .titleMovieTrailer{
     position: relative;
     top: 2rem;
-    width: 40rem;
     margin-bottom: 2rem;
+    transition-delay: 1s;
+    transition: width 3s;
+    width: 40rem;
+    &-started{
+        position: relative;
+        top: 2rem;
+        margin-bottom: 2rem;
+        transition-delay: 1s;
+        transition: width 3s;
+        width: 20rem;
+        bottom: 0;  
+    }
 }
 
 .subtitleMenuTrailer{
     margin-top:1rem;
     z-index: -2;
     svg{
+        transition: width 3s;
+        transition: height 3s;
         width: 2.5rem;
         height: 2.5rem;
     }
     h5{
         text-shadow: 2px 2px rgb(black, 0.6);
+        transition-delay: 1s;
+        transition: font-size 3s;
         font-size: 1.8rem;
+    }
+    &-started{
+        margin-top:1rem;
+        z-index: -2;
+        svg{
+            transition: width 3s;
+            transition: height 3s;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        h5{
+            text-shadow: 2px 2px rgb(black, 0.6);
+            transition-delay: 1s;
+            transition: font-size 3s;
+            font-size: 1rem;
+        }
     }
 }
 
