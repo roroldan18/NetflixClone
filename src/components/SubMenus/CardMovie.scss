@@ -8,43 +8,73 @@ $border-icon-hover: 0.1rem solid white;
     position:relative;
     font-size: 0.5rem;
     background-color: $background-color;
+    z-index: 1;
+    cursor: pointer;
     transition: 1s;
     height: fit-content;
     width: fit-content;
-
+    contain: content;
+    
     .imgMovieCard{     
         display: flex;
         flex-direction: column;       
         justify-content: start;
         align-items: start;
-        margin-left: 0.4rem;
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
         border-radius: 0.2rem;
         width: 15rem !important;
         height: $height-card;
+        position: relative;
         transition: 1s;
     }
-    
-    .infoCard{
+    .imgMovieCardDivInfoContainer{
+        contain: content;
         width: 15rem;
+        position: relative;
+        z-index: 3;
         height: 0;
         opacity: 0;
         transition: 1s;
+        .imgMovieCardExpansive{
+            transform: scale(1, 0.5);
+            opacity: 0;
+        }
     }
-}
 
-.imgMovieCard:hover{
-    width: 20rem !important;
-    height: 20rem;
-    transition: 1s;
-    box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
-}
-.imgMovieCard:hover~.infoCard{
-    height: fit-content;
-    width: 20rem;
-    opacity: 1;
-    transition: 1s;
+    &:hover{
+        .imgMovieCard{
+            opacity: 0;
+            position: fixed;
+        }
+        .imgMovieCardDivInfoContainer{
+            height: auto;
+            width: 18rem;
+            top: -7rem;
+            opacity: 1;
+            z-index: 3;
+            transition: 1s;
+            margin-bottom: -7rem;
+            position: relative;
+            box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.5);
+            .imgMovieCardExpansive{
+                transform: scale(1.2, 0.5);
+                opacity: 1;
+                position: sticky;
+                z-index: 3;
+                transition: 1s;
+            }
+            .infoCard{
+                position: relative;
+                top: -7rem;
+                transition: 1s;
+                
+            }
+
+        }
+    }
 }
 
 

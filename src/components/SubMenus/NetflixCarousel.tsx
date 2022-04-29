@@ -11,7 +11,6 @@ export const NetflixCarousel = () => {
 
   return (
     <div className="wrapper">
-        
         <section id="section1">
             <a href="#section3">‹</a>
             {

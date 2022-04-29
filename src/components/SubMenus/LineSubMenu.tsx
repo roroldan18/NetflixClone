@@ -49,7 +49,7 @@ export const LineSubMenu = ({menu}:PropLineSubMenu) => {
   }
 
   return (
-    <div  className="mt-5" onMouseOver={handleMouseHoverSection} onMouseOut={handleMouseOutSection}>
+    <div  className="lineSection mt-5" onMouseOver={handleMouseHoverSection} onMouseOut={handleMouseOutSection}>
         <div className='subTitle'>
           <h3 className='m-0 mr-3'>{menu.title}</h3>
           {

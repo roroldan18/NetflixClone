@@ -13,10 +13,10 @@ html {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(3,100%);
-    overflow:hidden;
     scroll-behavior: smooth;
     width: 100%;
-    -ms-overflow-style: none;
+    height: 10rem;
+    overflow: hidden;
     scrollbar-width: none;
     &::-webkit-scrollbar {
         display: none; 
