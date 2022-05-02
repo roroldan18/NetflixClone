@@ -15,7 +15,7 @@ import { buttonsOptions } from '../utils/buttonsOptions';
 /* import { SelectionsBar } from './SelectionsBar';
 import { optionsTrailer } from '../utils/optionsTrailer'; */
 
-export const MainVideoMenu = () => {
+export const MainVideoMenu = ():JSX.Element => {
 
     const [videoIsPaused, setVideoIsPaused] = useState(false);
     const [videoTrailer, setVideoTrailer] = useState<HTMLVideoElement|null>(null);

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { PictureSelection } from '../components/SelectionsBar/PictureSelection';
-import { ProgressBar } from '../components/SelectionsBar/ProgressBar';
+import { PictureSelection } from './PictureSelection';
+import { ProgressBar } from './ProgressBar';
 import './SelectionsBar.scss';
-import { OptionsTrailer } from '../utils/optionsTrailer';
-import { PropSelectionBar } from '../utils/types';
+import { OptionsTrailer } from '../../utils/optionsTrailer';
+import { PropSelectionBar } from '../../utils/types';
 
 export const SelectionsBar = ({options, buttonsOptions}:PropSelectionBar) => {
 

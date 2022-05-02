@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header } from './Header'
 import { MainVideoMenu } from './MainVideoMenu'
-import { SubMenus } from './SubMenus'
+import { SubMenus } from '../components/SubMenus/SubMenus'
 
 export const MainPage = ():JSX.Element => {
 

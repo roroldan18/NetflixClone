@@ -5,7 +5,7 @@ import { PropLineSubMenu } from '../../utils/types';
 import { CardMovieSubMenu } from './CardMovieSubMenu';
 
 
-export const LineSubMenu = ({menu}:PropLineSubMenu) => {
+export const LineSubMenu = ({menu}:PropLineSubMenu):JSX.Element => {
 
 
 

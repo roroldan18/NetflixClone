@@ -1,6 +1,6 @@
-import React from 'react'
+/* import React from 'react'
 import './NetflixCarousel.scss';
-import { optionsTrailer } from '../../utils/optionsTrailer';
+import { optionsTrailer } from '../../../utils/optionsTrailer';
 
 
 export const NetflixCarousel = () => {
@@ -50,3 +50,4 @@ export const NetflixCarousel = () => {
     </div>
   )
 }
+ */
