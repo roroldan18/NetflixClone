@@ -11,9 +11,8 @@ $border-icon-hover: 0.1rem solid white;
     color: #fff;
     text-decoration: none;
     font-size: 6em;
-    background:rgb(0,0,0);
+    max-height: 10rem;
     width: 7.5rem;
-    padding: 1.2rem;
     text-align: center;
     z-index: 4;
     &:hover{
@@ -50,13 +49,12 @@ $border-icon-hover: 0.1rem solid white;
                 //Estilo de las flechas
                 .arrowPrev{
                     @include styleArrow;
-                    top:0; bottom:0; left:0;
-                    background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+                    background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
                 }
                 .arrowNext{
                     @include styleArrow;
-                    top:0; bottom:0; right:0;
-                    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+                    right:0;
+                    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
                 }
 
 
@@ -88,9 +86,9 @@ $border-icon-hover: 0.1rem solid white;
                         contain: content;
                         width: 20rem;
                         background-color: black;
-                        box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.8);
-                        -webkit-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.8);
-                        -moz-box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.8);
+                        box-shadow: 1rem 0px 2rem rgba(0, 0, 0, 0.8);
+                        -webkit-box-shadow: 1rem 0px 2rem rgba(0, 0, 0, 0.8);
+                        -moz-box-shadow: 1rem 0px 2rem rgba(0, 0, 0, 0.8);
 
 
 
