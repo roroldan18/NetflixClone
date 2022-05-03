@@ -8,32 +8,42 @@ import { CardMovieSubMenu } from './CardMovieSubMenu';
 export const LineSubMenu = ({menu}:PropLineSubMenu):JSX.Element => {
 
 
+  const length=7;
 
   let startSlice = 0;
-  let endSlice = 7;
-  const totalSections = Math.ceil(menu.movies.length/7);
+  let endSlice = length;
+  const totalSections = Math.ceil(menu.movies.length/length);
 
   const renderSections = () => {
+
     const sections = [];
+
     for (let i = 1; i <= totalSections; i++) {
+
       sections.push(
         <section id={`section${menu.order}-${i}`} key={i}>
-          <a className='arrowPrev' href={`#section${menu.order}-${i === 1 ? totalSections : i-1}`}>‹</a>
+          <div className='relativeContainerArrow'>
+            <a className='arrowPrev' href={`#section${menu.order}-${i === 1 ? totalSections : i-1}`}>‹</a>
+          </div>
           {
             menu.movies.slice(startSlice, endSlice).map( (option:OptionsTrailer) =>
               <CardMovieSubMenu option={option} key={option.order} />
             )
           }
-          <a className='arrowNext' href={`#section${menu.order}-${i === totalSections ? 1 : i+1}`}>›</a>
+          <div className='relativeContainerArrow'>
+            <a className='arrowNext' href={`#section${menu.order}-${i === totalSections ? 1 : i+1}`}>›</a>
+          </div>
         </section>
       )
+      
       startSlice = endSlice;
-      if((menu.movies.length-endSlice) >= 7) {
-        endSlice += 7;
+      if((menu.movies.length-endSlice) >= length) {
+        endSlice += length;
       } else{
         endSlice = menu.movies.length;
       }
     }
+    
     return sections;
   }
 

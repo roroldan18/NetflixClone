@@ -6,11 +6,25 @@ import { ModalCardExpand } from './ModalCardExpand';
 export const CardMovieSubMenu = ({option}:PropCardMoreInfo):JSX.Element => {
 
       const [isOpen, setIsOpen] = useState(false);
+      
+      let timer = 0;
+      const TIMEOUT = 500;
+
+      const handleHoverEnter = () => {
+        timer = window.setTimeout(() => {
+          setIsOpen(true);
+        }, TIMEOUT);
+      }
+
+      const hoverOut = () => {
+        clearTimeout(timer);
+        setIsOpen(false);
+      }
 
       
 
       return (
-        <div className='imgMovieCardDiv' onMouseEnter={ ()=>setIsOpen(true) }  onMouseLeave={ ()=> setIsOpen(false) }   >
+        <div className='imgMovieCardDiv' onMouseEnter={handleHoverEnter}  onMouseLeave={hoverOut}   >
           {
             !!isOpen 
             ?

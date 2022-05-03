@@ -8,11 +8,10 @@ $border-icon: 0.1rem solid rgb(170, 168, 168);
 $border-icon-hover: 0.1rem solid white;
 @mixin styleArrow {
     position: absolute;
-    color: #fff;
+    color: rgb(186, 186, 186);
     text-decoration: none;
     font-size: 6em;
     max-height: 10rem;
-    width: 7.5rem;
     text-align: center;
     z-index: 4;
     &:hover{
@@ -21,14 +20,12 @@ $border-icon-hover: 0.1rem solid white;
 }
 
 
-//Probar darle estilo diferente a cada subMenu y si está seleccionado, traerlo al frente y el resto para atras
-
 //Estilos sub menus
 .subMenu{
-    position: relative;
-    z-index: 1;
     scroll-behavior: smooth;
     margin-left: 2rem;
+    position: relative;
+    z-index: 1;
     //Defino cada linea de submenu
     .lineSection{
         height:15rem;
@@ -43,18 +40,24 @@ $border-icon-hover: 0.1rem solid white;
             }
             section{
                 display: grid;
-                grid-template-columns: repeat(7, auto);
+                grid-template-columns: repeat(10, auto);
                 margin: 0.3rem;
+                width: 100%;
 
                 //Estilo de las flechas
-                .arrowPrev{
-                    @include styleArrow;
-                    background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-                }
-                .arrowNext{
-                    @include styleArrow;
-                    right:0;
-                    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+
+                .relativeContainerArrow{
+                    position: relative;
+                    .arrowPrev{
+                        @include styleArrow;
+                        left: 0;bottom: 0;top: 0;
+                        background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+                    }
+                    .arrowNext{
+                        @include styleArrow;
+                        right: 0;bottom: 0;top: 0;
+                        background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+                    }
                 }
 
 
@@ -74,7 +77,6 @@ $border-icon-hover: 0.1rem solid white;
                         align-items: start;                        
                         margin-left: 0.3rem;
                         margin-right: 0.3rem;
-                        border-radius: 0.2rem;
                         width: 15rem;
                         height: $height-card;
                         transition: 1s;
@@ -85,12 +87,16 @@ $border-icon-hover: 0.1rem solid white;
                         z-index: 2;
                         contain: content;
                         width: 20rem;
+                        opacity: 0;
                         background-color: black;
                         box-shadow: 1rem 0px 2rem rgba(0, 0, 0, 0.8);
                         -webkit-box-shadow: 1rem 0px 2rem rgba(0, 0, 0, 0.8);
                         -moz-box-shadow: 1rem 0px 2rem rgba(0, 0, 0, 0.8);
-
-
+                        transition: 800ms;
+                        &:hover{
+                            opacity: 1;
+                            transition:800ms;
+                        }
 
                         .allCardFixed{
                             .imgMovieCardExpansive{
