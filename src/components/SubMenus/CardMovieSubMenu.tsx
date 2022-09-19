@@ -8,7 +8,7 @@ export const CardMovieSubMenu = ({option}:PropCardMoreInfo):JSX.Element => {
       const [isOpen, setIsOpen] = useState(false);
       
       let timer = 0;
-      const TIMEOUT = 1000;
+      const TIMEOUT = 200;
 
       const handleHoverEnter = () => {
         timer = window.setTimeout(() => {

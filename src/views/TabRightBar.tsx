@@ -8,7 +8,7 @@ import { ProfilesComponent } from '../components/Nav/ProfilesComponent';
 export const TabRightBar = ():JSX.Element => {
 
   let timer = 0;
-  const TIMEOUT:number = 500;
+  const TIMEOUT:number = 400;
 
   const [isHoveringNotifications, setIsHoveringNotifications] = useState(false);
   const [isHoveringProfiles, setIsHoveringProfiles] = useState(false);
@@ -44,11 +44,11 @@ export const TabRightBar = ():JSX.Element => {
           <SearchIcon />
           <span onMouseOver={handleMouseHoverNotification} onMouseOut={handleMouseOutNotification} className='notificationsMenu'>
             <span className="fa-layers-counter iconNotification">10</span>
-            <i className="fa-solid fa-bell fa-lg"></i>
+            <i className="fa-solid fa-bell fa-lg" onClick={()=>setIsHoveringNotifications(!isHoveringNotifications)}></i>
             { isHoveringNotifications && <NotificationComponent/>}
           </span>
           <span onMouseOver={handleMouseHoverProfiles} onMouseOut={handleMouseOutProfiles} className='profilesMenu'>
-            <img src="assets/img/profilePicture/profile.jpg" className='profilePicture' alt="profile" />
+            <img src="assets/img/profilePicture/profile.jpg" className='profilePicture' alt="profile" onClick={()=>setIsHoveringProfiles(!isHoveringProfiles)} />
             <i className="fa-solid fa-caret-down iconProfile"></i>
             { isHoveringProfiles && <ProfilesComponent />}
           </span>

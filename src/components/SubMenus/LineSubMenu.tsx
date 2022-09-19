@@ -8,7 +8,7 @@ import { CardMovieSubMenu } from './CardMovieSubMenu';
 export const LineSubMenu = ({menu}:PropLineSubMenu):JSX.Element => {
 
 
-  const length=7;
+  const length=5;
 
   let startSlice = 0;
   let endSlice = length;
